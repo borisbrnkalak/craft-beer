@@ -955,7 +955,7 @@ html {
 }
 
 .scrollup:hover i {
-  animation: animateArrow 0.5s ease-in-out;
+  animation: animateArrow 0.5s ease-in-out infinite;
 }
 
 .show-scroll {
@@ -1532,9 +1532,23 @@ html {
   .gray .containerr {
     width: 95%;
   }
+
+  .footer .about-us,
+  .footer .contact {
+    width: 100%;
+    margin-bottom: 4em;
+  }
+
+  .footer .contact .logo {
+    margin-bottom: 2em;
+  }
+
+  .parallax-no3 .containerr {
+    width: 80%;
+  }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
   .pictures .first-row,
   .pictures .second-row {
     flex-direction: column;
@@ -1551,6 +1565,24 @@ html {
 
   .pictures .text-images img {
     width: 25%;
+  }
+
+  .header .links {
+    display: none;
+  }
+
+  .paralax.container {
+    justify-content: flex-start;
+  }
+
+  .paralax.container .paralax-text {
+    margin-left: 4em;
+    padding-bottom: 4em;
+  }
+
+  .paralax.container h1 {
+    min-width: 100%;
+    font-size: 2.5em;
   }
 
   .leader {
@@ -1582,5 +1614,23 @@ html {
 
   .footer {
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .map {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .map iframe {
+    height: 10em;
+    align-self: stretch;
+  }
+
+  .melbourne {
+    position: static;
+    max-width: 100%;
+    padding: 1em;
   }
 }
