@@ -1801,7 +1801,81 @@ input#menu-white {
   }
 }
 
+@media screen and (max-width: 930px) {
+  .containerrr {
+    width: 80%;
+  }
+
+  .human,
+  .human:nth-child(2) {
+    flex-direction: column;
+  }
+
+  .human:nth-child(2),
+  .human:nth-child(3) {
+    margin-top: 2em;
+  }
+
+  .human .text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .human p {
+    width: 100%;
+  }
+
+  .human .link {
+    width: 100%;
+  }
+
+  .human .image {
+    margin-top: 1em;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .connoisseurs .feedback-first-row,
+  .connoisseurs .feedback-second-row {
+    flex-direction: column;
+  }
+
+  .connoisseurs .specific {
+    margin-top: 1em;
+    width: 100%;
+    padding-bottom: 2em;
+    border-bottom: 1px solid #9fb1bd;
+  }
+
+  .connoisseurs .specific:nth-child(3) {
+    border: none;
+  }
+
+  .specific p {
+    border: none;
+  }
+
+  .samples-of-beers {
+    flex-direction: column;
+    margin-top: 2em;
+  }
+
+  .beer-link {
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .one-beer {
+    margin-bottom: 4em;
+  }
+}
+
 @media screen and (max-width: 530px) {
+  .containerrr {
+    width: 100%;
+  }
   .map {
     display: flex;
     flex-direction: column;
@@ -1819,9 +1893,60 @@ input#menu-white {
   }
 }
 
+@media screen and (max-width: 400px) {
+  .connoisseurs h1 {
+    font-size: 2.1em;
+  }
+}
+
 @media screen and (min-width: 280px) and (max-width: 340px) {
   .header .logo img {
     width: 80%;
     height: 100px;
+  }
+}
+
+@media screen and (min-width: 280px) and (max-width: 1320px) {
+  .first-row,
+  .second-row {
+    flex-direction: column;
+  }
+
+  .images-wtext .padding-image,
+  .images-wtext .full-image,
+  .images-wtext .text {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .images-wtext .padding-image img {
+    width: 100%;
+  }
+
+  .images-wtext .text h1 {
+    font-size: 2.1em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .images-wtext .padding-image,
+  .images-wtext .full-image,
+  .images-wtext .text {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 395px) {
+  .changeable-text {
+    width: 80%;
+  }
+
+  .end-words h1 {
+    font-size: 2.1em;
+  }
+
+  .connoisseurs h1 {
+    font-size: 1.5em;
   }
 }
