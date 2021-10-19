@@ -76,11 +76,6 @@ html {
 
 /*------------------------------------------------------*/
 
-input#menu,
-input#menu-white {
-  display: none;
-}
-
 .hamburger,
 .hamburger-white {
   width: 40px;
@@ -90,7 +85,6 @@ input#menu-white {
 
 .hamburger .line,
 .hamburger-white .line {
-  background: #9fb1bd;
   transition: background ease 0.3s, top ease 0.3s 0.3s, transform ease 0.3s;
   width: 100%;
   height: 4px;
@@ -128,27 +122,12 @@ input#menu-white {
   background: #b28564;
 }
 
-#menu:checked + .hamburger .line.middle,
-#menu-white:checked + .hamburger-white .line.middle {
-  background: transparent;
-}
-
-#menu:checked + .hamburger .line.top,
-#menu-white:checked + .hamburger-white .line.top {
+.rotate-top {
   transform: rotate(45deg);
 }
 
-#menu:checked + .hamburger .line.bottom,
-#menu-white:checked + .hamburger-white .line.bottom {
+.rotate-bottom {
   transform: rotate(-45deg);
-}
-
-#menu:checked + .hamburger .line.bottom,
-#menu:checked + .hamburger .line.top,
-#menu-white:checked + .hamburger-white .line.bottom,
-#menu-white:checked + .hamburger-white .line.top {
-  top: 0;
-  transition: top ease 0.3s, transform ease 0.3s 0.3s;
 }
 
 /*------------------------------------------------------*/
