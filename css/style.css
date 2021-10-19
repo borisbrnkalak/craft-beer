@@ -67,85 +67,6 @@ html {
   cursor: pointer;
 }
 
-.sub-menu1 {
-  display: none;
-  background: #fff;
-  margin-top: calc(49px - 15px + 7px);
-  box-shadow: 0 0 10px 0 rgb(0 0 0 / 40%);
-  width: 220px;
-  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
-}
-
-.sub-menu2 {
-  display: none;
-  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
-  width: 220px;
-  box-shadow: 0 0 10px 0 rgb(0 0 0 / 40%);
-  background: #fff;
-  margin-right: -220px;
-}
-
-.sub-menu1 ul {
-  width: 100%;
-}
-
-.sub-menu1 .active {
-  color: #b28564;
-}
-
-.sub-menu1 li {
-  padding: 5px 0;
-  margin: 0;
-  border: none;
-  width: 100%;
-  transition: all 200ms ease;
-  position: relative;
-}
-
-.sub-menu1 li a {
-  color: #181818;
-  display: block;
-  padding: 1em 0;
-  font-size: 0.9em;
-  margin-left: auto;
-  margin-right: auto;
-  border-bottom: 1px solid #b9b9b9;
-  width: 75%;
-  font-weight: 400;
-}
-
-.sub-menu1 li:last-child a {
-  border: none;
-}
-
-.sub-menu1 .sub-menu2 li a {
-  border-bottom: 1px solid #b9b9b9;
-}
-
-.sub-menu2 li:last-child a {
-  border: none;
-}
-
-.sub-menu1 li:hover {
-  border-left: 4px solid #b28564;
-}
-
-.sub-menu1 a {
-  padding: 0;
-}
-
-.nav-links li:hover .sub-menu1 {
-  display: block;
-  position: absolute;
-}
-
-.sub-menu1 li:hover .sub-menu2 {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
 @media screen and (min-width: 1050px) {
   .hamburger,
   .hamburger-white {
@@ -522,6 +443,7 @@ input#menu-white {
   transition: all 0.5s ease;
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-top: 4em;
   position: absolute;
   top: 0;
@@ -1511,6 +1433,78 @@ input#menu-white {
   width: 50%;
 }
 
+.formular-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6em 0;
+}
+
+.formular-text h1 {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  color: #181818;
+  letter-spacing: 2px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+
+.formular-text p {
+  font-family: "Roboto Slab", Arial, sans-serif;
+  line-height: 1.8;
+  color: #181818;
+  width: 85%;
+}
+
+input,
+textarea {
+  border: 1px solid #b28564;
+}
+
+input {
+  width: 49%;
+  height: 50px;
+  padding: 10px;
+}
+
+textarea {
+  width: 98.5%;
+  margin-top: 2px;
+  padding: 10px;
+  resize: vertical;
+  min-height: 150px;
+  max-height: 300px;
+  transition: 0.2s;
+}
+
+.formular input:focus,
+.formular textarea:focus {
+  outline: 2px solid brown;
+}
+
+.formular button {
+  width: 98.5%;
+  margin-top: 0.5em;
+  height: 50px;
+  cursor: pointer;
+  background: #fff;
+  text-transform: uppercase;
+  color: #b28564;
+  border: 1px solid #b28564;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.formular button:hover {
+  color: #181818;
+}
+
+.formular-text,
+.formular-element {
+  width: 50%;
+}
+
 @media screen and (max-width: 1300px) {
   .movable-products {
     flex-direction: column;
@@ -1581,6 +1575,25 @@ input#menu-white {
 @media screen and (max-width: 900px) {
   .all-products {
     min-height: 650px;
+  }
+
+  .formular-wrapper {
+    flex-direction: column;
+  }
+
+  .formular-text {
+    text-align: center;
+    width: 100%;
+
+    margin-bottom: 1.5em;
+  }
+
+  .formular-text p {
+    width: 100%;
+  }
+
+  .formular-element {
+    width: 100%;
   }
 }
 
@@ -1935,6 +1948,19 @@ input#menu-white {
   .images-wtext .text {
     width: 100%;
   }
+
+  .formular input {
+    width: 100%;
+    margin-bottom: 0.5em;
+  }
+
+  .formular textarea {
+    width: 100%;
+  }
+
+  .formular button {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 395px) {
@@ -1948,5 +1974,18 @@ input#menu-white {
 
   .connoisseurs h1 {
     font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .header-white .logo,
+  .header .logo {
+    width: 80%;
+  }
+
+  .header-white .logo img,
+  .header .logo img {
+    width: 100%;
+    object-fit: contain;
   }
 }
