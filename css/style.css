@@ -61,7 +61,7 @@ html {
 }
 
 .nav-links li {
-  padding: calc(50px - 15px + 3px) 0;
+  padding: calc(50px - 11px + 3px) 0;
   border-bottom: 4px solid transparent;
   margin-right: 50px;
   cursor: pointer;
@@ -180,9 +180,6 @@ html {
 }
 
 .container {
-  /*width: 50%;
-  margin-left: auto;
-  margin-right: auto;*/
   display: flex;
   justify-content: center;
 }
@@ -323,18 +320,6 @@ html {
   object-fit: cover;
   z-index: -1;
 }
-/*.parallax-no22 {
-  background-position: 50% 0%;
-  background-attachment: fixed;
-  font-family: "Roboto Slab";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-repeat: no-repeat;
-}*/
 
 .second-parallax .containerr {
   width: 65%;
@@ -388,7 +373,6 @@ html {
   width: 75%;
   margin-left: auto;
   margin-right: auto;
-  /*text-align: center;*/
   margin-bottom: 3em;
   position: relative;
 }
@@ -933,7 +917,6 @@ html {
   padding: 1em;
   display: flex;
   text-decoration: none;
-  /*background: linear-gradient(#76470066 0%, #76470066 100%);*/
   background-color: #76470066;
   opacity: 0.9;
   border-radius: 8px;
@@ -988,7 +971,6 @@ html {
   z-index: 3;
 }
 
-/*.header-variant-white .header {*/
 .header-white {
   display: flex;
   justify-content: space-between;
@@ -1087,7 +1069,6 @@ html {
 }
 
 .human .text {
-  /*align-self: stretch;*/
   width: 50%;
   padding: 0 2em;
 }
@@ -1926,6 +1907,10 @@ textarea {
   .images-wtext .full-image,
   .images-wtext .text {
     width: 100%;
+  }
+
+  .beer-up .image img {
+    margin-left: -10em;
   }
 
   .formular input {
