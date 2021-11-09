@@ -1,77 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact</title>
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <div class="header-variant-white" id="white-menu">
-      <div class="header-white">
-        <div class="logo">
-          <img src="img/logo-black.png" alt="LOGO" />
-        </div>
+<?php 
 
-        <div class="hamburger-white">
-          <div class="line middle">
-            <div class="line top"></div>
-            <div class="line bottom"></div>
-          </div>
-        </div>
 
-        <div class="links">
-          <ul class="nav-links">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="overview.html">OVERVIEW</a></li>
-            <li><a href="our-team.html">OUR TEAM</a></li>
-            <li>
-              <a href="testimonials.html">TESTIMONIALS</a>
-            </li>
-            <li class="selected"><a href="#">CONTACT</a></li>
-          </ul>
+include_once "./db/Database.php";
+include_once "./db/models/Beer.php";
+include_once "./db/models/Contact.php";
 
-          <ul class="social">
-            <li>
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fab fa-pinterest"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fas fa-shopping-cart"></i></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+$db = new Database();
 
+/*echo "<pre>";
+print_r(Beer::getAll($db));
+$bla = Beer::getByID($db,1);
+print_r($bla);
+echo "</pre>";
+
+if(!is_null($bla)){
+
+  echo "id: ".$bla->getId()."<br>";
+  echo "title: ".$bla->getTitle()."<br>";
+  echo "description: ".$bla->getDescription()."<br>";
+}*/
+
+// Beer::insert($db,new Beer(null,'Ahoj',"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae reiciendis quo repellat minima, quasi fugit dicta ad, soluta aliquid laborum ipsum culpa! Nobis suscipit rerum facilis repellat ea saepe quibusdam."));
+// Beer::insert($db,new Beer(null,'Cau',"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae reiciendis quo repellat minima, quasi fugit dicta ad, soluta aliquid laborum ipsum culpa! Nobis suscipit rerum facilis repellat ea saepe quibusdam."));
+// Beer::insert($db,new Beer(null,'Id prec',"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae reiciendis quo repellat minima, quasi fugit dicta ad, soluta aliquid laborum ipsum culpa! Nobis suscipit rerum facilis repellat ea saepe quibusdam."));
+// Beer::insert($db,new Beer(null,'Cus bus',"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae reiciendis quo repellat minima, quasi fugit dicta ad, soluta aliquid laborum ipsum culpa! Nobis suscipit rerum facilis repellat ea saepe quibusdam."));
+
+// Beer::update($db,"UPDATE `beers` SET `title`='Ahoj' WHERE id = 1");
+// Beer::update($db,"UPDATE `beers` SET `title`='Ahoj' WHERE id = 1");
+
+// Beer::delete($db,3);
+//print_r(Beer::getAll($db));
+// Beer::delete($db,4);
+// Beer::delete($db,5);
+// Beer::delete($db,6);
+include_once "./inc/header.php";
+include_once "./inc/menu.php";
+
+
+if (isset($_GET['submit'])){
+  $email = $_GET['email'];
+  $name = $_GET['name'];
+  $message = $_GET['message'];
+
+  Contact::insert($db, new Contact(null, $email, $name, $message));
+}
+
+Contact::update($db, new Contact(8, "maros@gmail.com", 'adroadro', "Správa"));
+
+?>
     <div
       id="parallax"
       class="paralax"
@@ -91,11 +67,12 @@
 
         <div class="links">
           <ul class="nav-links">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="overview.html">OVERVIEW</a></li>
-            <li><a href="our-team.html">OUR TEAM</a></li>
-            <li><a href="testimonials.html">TESTIMONIALS</a></li>
+            <li><a href="index.php">HOME</a></li>
+            <li><a href="overview.php">OVERVIEW</a></li>
+            <li><a href="our-team.php">OUR TEAM</a></li>
+            <li><a href="testimonials.php">TESTIMONIALS</a></li>
             <li class="selected"><a href="#">CONTACT</a></li>
+            <li><a href="product.php">PRODUCT</a></li>
           </ul>
 
           <ul class="social">
@@ -115,6 +92,9 @@
               <a href="#"><i class="fas fa-shopping-cart"></i></a>
             </li>
           </ul>
+        </div>
+        <div class="login transparent">
+          <a class="login-btn" href="#">LOGIN</a>
         </div>
       </header>
 
@@ -140,6 +120,7 @@
       </div>
     </div>
 
+
     <div class="white">
       <div class="containerr">
         <div class="formular-wrapper">
@@ -152,7 +133,6 @@
               organically.
             </p>
           </div>
-
           <div class="formular-element">
             <form action="#" method="GET" class="formular">
               <div class="inputs">
@@ -164,20 +144,20 @@
                 />
                 <input
                   type="text"
-                  name="meno"
+                  name="name"
                   placeholder="YOUR NAME"
                   required
                 />
               </div>
 
               <textarea
-                name="text"
+                name="message"
                 rows="10"
                 placeholder="MESSAGE"
                 required
               ></textarea>
 
-              <button>SUBMIT</button>
+              <button type="submit" name="submit">SUBMIT</button>
             </form>
           </div>
         </div>
@@ -227,12 +207,6 @@
       </div>
     </div>
 
-    <a href="#parallax" class="scrollup" id="scroll-up">
-      <i class="fas fa-arrow-up scrollup-icon"></i>
-    </a>
-
-    <script src="js/hamburger.js"></script>
-    <script src="js/parallax-effext.js"></script>
-    <script src="js/main.js"></script>
-  </body>
-</html>
+<?php 
+include_once "./inc/footer.php";
+?>

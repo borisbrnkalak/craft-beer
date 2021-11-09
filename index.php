@@ -1,33 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Beer</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    />
-  </head>
-
-  <body>
+<?php
+  include_once "./inc/header.php"
+?>
     <div class="header-variant-white" id="white-menu">
       <div class="header-white">
         <div class="logo">
@@ -43,13 +16,14 @@
 
         <div class="links">
           <ul class="nav-links">
-            <li class="selected"><a href="index.html">HOME</a></li>
-            <li><a href="overview.html">OVERVIEW</a></li>
-            <li><a href="our-team.html">OUR TEAM</a></li>
-            <li><a href="testimonials.html">TESTIMONIALS</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
+            <li class="selected"><a href="index.php">HOME</a></li>
+            <li><a href="overview.php">OVERVIEW</a></li>
+            <li><a href="our-team.php">OUR TEAM</a></li>
+            <li><a href="testimonials.php">TESTIMONIALS</a></li>
+            <li><a href="contact.php">CONTACT</a></li>
+            <li><a href="product.php">PRODUCT</a></li>
           </ul>
-
+          
           <ul class="social">
             <li>
               <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -69,6 +43,11 @@
           </ul>
         </div>
       </div>
+      <div class="login">
+        <a class="login-btn" href="#">LOGIN</a>
+      </div>
+
+      
     </div>
 
     <div
@@ -90,11 +69,12 @@
 
         <div class="links">
           <ul class="nav-links">
-            <li class="selected"><a href="index.html">HOME</a></li>
-            <li><a href="overview.html">OVERVIEW</a></li>
-            <li><a href="our-team.html">OUR TEAM</a></li>
-            <li><a href="testimonials.html">TESTIMONIALS</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
+            <li class="selected"><a href="index.php">HOME</a></li>
+            <li><a href="overview.php">OVERVIEW</a></li>
+            <li><a href="our-team.php">OUR TEAM</a></li>
+            <li><a href="testimonials.php">TESTIMONIALS</a></li>
+            <li><a href="contact.php">CONTACT</a></li>
+            <li><a href="product.php">PRODUCT</a></li>
           </ul>
 
           <ul class="social">
@@ -114,6 +94,10 @@
               <a href="#"><i class="fas fa-shopping-cart"></i></a>
             </li>
           </ul>
+        </div>
+
+        <div class="login transparent">
+          <a class="login-btn" href="#">LOGIN</a>
         </div>
       </header>
 
@@ -517,13 +501,8 @@
       </div>
     </div>
 
-    <a href="#parallax" class="scrollup" id="scroll-up">
-      <i class="fas fa-arrow-up scrollup-icon"></i>
-    </a>
+    
 
-    <script src="js/hamburger.js"></script>
-    <script src="js/parallax-effext.js"></script>
-    <script src="js/slider.js"></script>
-    <script src="js/main.js"></script>
-  </body>
-</html>
+<?php 
+  include_once "./inc/footer.php";
+?>
