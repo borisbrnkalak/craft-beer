@@ -1515,10 +1515,13 @@ textarea {
 .login {
   position: absolute;
   right: 82px;
+  display: flex;
+  flex-direction: column;
+  bottom: -53px;
 }
 
 .login.transparent {
-  bottom: 0;
+  bottom: -53px;
 }
 
 .login a {
@@ -1531,7 +1534,19 @@ textarea {
   transition: 0.5s;
 }
 
-.login:hover a {
+.login-btn {
+  margin-bottom: 0.2em;
+}
+
+.logout-btn {
+  text-align: center;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-btn:hover,
+.logout-btn:hover {
   background-color: #2f1c00;
 }
 
@@ -1624,6 +1639,17 @@ textarea {
 
   .formular-element {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .modal {
+    width: 100%;
+  }
+
+  .btn--close-modal {
+    top: 0;
+    right: 0.5rem;
   }
 }
 
@@ -1738,6 +1764,10 @@ textarea {
   .white-var.header {
     height: 100px;
   }
+
+  .nav-links li:first-child {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1159px) {
@@ -1750,10 +1780,28 @@ textarea {
     padding-bottom: 2em;
   }
 
+  .login.transparent,
+  .login {
+    display: none;
+  }
+
+  .login {
+    width: 100%;
+    text-align: center;
+
+    height: 20px;
+    right: 0;
+    bottom: 67%;
+  }
+
+  .login.transparent {
+    bottom: 67%;
+  }
+
   .header.expand,
   .header-white.expand {
     background: gray;
-    max-height: 300px;
+    max-height: 325px;
   }
 
   .header .links,
@@ -2031,7 +2079,7 @@ textarea {
   transform: translate(-50%, -50%);
   max-width: 60rem;
   background-color: #f3f3f3;
-  padding: 3rem 3rem;
+  padding: 3rem 1rem;
   box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
   z-index: 1000;
   transition: all 0.5s;
@@ -2059,30 +2107,29 @@ textarea {
 }
 
 .modal__form {
-  margin: 0 3rem;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 0.5rem;
   margin-top: 1em;
 }
 
 .modal__form label {
-  font-size: 1.7rem;
+  font-size: 1.1rem;
   font-weight: 500;
   font-family: "Roboto Condensed", sans-serif;
   color: #464646;
 }
 
 .modal__form input {
-  font-size: 1.7rem;
+  font-size: 1.1rem;
   padding: 1rem 1.5rem;
   border: 1px solid #ddd;
   border-radius: 0.5rem;
   width: 100%;
   border: 1px solid #b28564;
   transition: 0.5s;
-  margin-left: 0.3em;
+  width: 270px;
 }
 
 .modal__form input:focus {
@@ -2128,8 +2175,28 @@ textarea {
 .register-now {
   margin-top: 1em;
   font-family: "Roboto Condensed", sans-serif;
+  text-align: center;
 }
 
 .register-now a {
   color: #b28564;
+}
+
+.nav-links li:first-child {
+  margin-bottom: 0.2em;
+}
+
+.nav-links .login-btn {
+  padding: 0.4em 1em;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  background: #b28564;
+  font-family: "Roboto Condensed", sans-serif;
+  transition: 0.5s;
+}
+
+.nav-links .login-btn:hover {
+  background-color: #2f1c00;
+  color: #fff;
 }
