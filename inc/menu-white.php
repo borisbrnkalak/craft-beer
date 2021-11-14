@@ -23,6 +23,17 @@
             }
             ?>
           </a></li>
+        <?php
+        if (isset($_COOKIE['is-logged'])) {
+        ?>
+          <li>
+            <form class="logout-form" action="services/logout.php" method="POST">
+              <button name="logout-btn" type="submit" class="logout-btn ">LOGOUT</button>
+            </form>
+          </li>
+        <?php
+        }
+        ?>
 
         <?php
         $scriptName = basename($_SERVER["SCRIPT_FILENAME"], '.php');
@@ -73,7 +84,9 @@
     <?php
     if (isset($_COOKIE['is-logged'])) {
     ?>
-      <a href="#" class="logout-btn">LOGOUT</a>
+      <form class="logout-form" action="services/logout.php" method="POST">
+        <button name="logout-btn" type="submit" class="logout-btn ">LOGOUT</button>
+      </form>
     <?php
     }
     ?>

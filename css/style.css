@@ -1517,11 +1517,12 @@ textarea {
   right: 82px;
   display: flex;
   flex-direction: column;
-  bottom: -53px;
+  bottom: -43px;
+  height: 50px;
 }
 
 .login.transparent {
-  bottom: -53px;
+  bottom: -40px;
 }
 
 .login a {
@@ -1538,11 +1539,27 @@ textarea {
   margin-bottom: 0.2em;
 }
 
+.logout-form {
+  text-align: center;
+}
+
 .logout-btn {
   text-align: center;
-  width: 60%;
   margin-left: auto;
   margin-right: auto;
+  padding: 0.5em 1em;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  background: #b28564;
+  font-family: "Roboto Condensed", sans-serif;
+  transition: 0.5s;
+  cursor: pointer;
+  border: none;
+}
+
+.logout-btn.hidden {
+  display: none;
 }
 
 .login-btn:hover,
@@ -1765,7 +1782,8 @@ textarea {
     height: 100px;
   }
 
-  .nav-links li:first-child {
+  .nav-links li:first-child,
+  .nav-links li:nth-child(2) {
     display: none;
   }
 }
@@ -1801,7 +1819,7 @@ textarea {
   .header.expand,
   .header-white.expand {
     background: gray;
-    max-height: 325px;
+    max-height: 360px;
   }
 
   .header .links,

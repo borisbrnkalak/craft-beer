@@ -39,7 +39,17 @@ if ($scriptName == "testimonials") {
           ?>
         </a></li>
 
-
+      <?php
+      if (isset($_COOKIE['is-logged'])) {
+      ?>
+        <li>
+          <form class="logout-form" action="services/logout.php" method="POST">
+            <button name="logout-btn" type="submit" class="logout-btn ">LOGOUT</button>
+          </form>
+        </li>
+      <?php
+      }
+      ?>
 
       <li class="<?php setClass($scriptName, "index") ?>"><a href="index.php">HOME</a></li>
       <li class="<?php setClass($scriptName, "overview") ?>"><a href="overview.php">OVERVIEW</a></li>
@@ -79,6 +89,14 @@ if ($scriptName == "testimonials") {
       }
       ?>
     </a>
-    <a href="#" class="logout-btn">LOGOUT</a>
+    <?php
+    if (isset($_COOKIE['is-logged'])) {
+    ?>
+      <form class="logout-form" action="services/logout.php" method="POST">
+        <button name="logout-btn" type="submit" class="logout-btn ">LOGOUT</button>
+      </form>
+    <?php
+    }
+    ?>
   </div>
 </header>
