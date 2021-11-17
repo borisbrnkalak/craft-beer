@@ -29,15 +29,15 @@ include_once "./inc/menu-white.php";
 <div class="white">
   <div class="images-wtext">
     <div class="first-row">
-      <div class="padding-image">
+      <div class="padding-image reveal">
         <img src="img/ingredients_01.jpg" alt="ING" />
       </div>
 
-      <div class="full-image">
+      <div class="full-image reveal">
         <img src="img/Overview/inner_vertical_transparent_01.png" alt="BEER" />
       </div>
 
-      <div class="text">
+      <div class="text reveal">
         <div class="flex-center">
           <span>What we learned so far</span>
           <h1>
@@ -56,7 +56,7 @@ include_once "./inc/menu-white.php";
 
     <div class="second-row">
       <div class="text gray">
-        <div class="flex-center">
+        <div class="flex-center reveal">
           <span>How we serve our beer</span>
           <h1>
             THE BEST WEISS<br />
@@ -71,11 +71,11 @@ include_once "./inc/menu-white.php";
         </div>
       </div>
 
-      <div class="padding-image">
+      <div class="padding-image reveal">
         <img src="img/ingredients_03.jpg" alt="ING" />
       </div>
 
-      <div class="full-image">
+      <div class="full-image reveal">
         <img src="img/Overview/inner_vertical_transparent_02.png" alt="BEER" />
       </div>
     </div>
@@ -83,7 +83,7 @@ include_once "./inc/menu-white.php";
 </div>
 
 <div class="white">
-  <div class="products">
+  <div class="products reveal">
     <div class="containerr">
       <div class="header">
         <span style="font-size: 1.3em; color: #b28564">Long tradition is our key</span>

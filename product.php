@@ -22,7 +22,7 @@ include_once "./inc/menu-white.php";
 <div class="white">
   <div class="containerr">
     <div class="product-review">
-      <div class="single-post">
+      <div class="single-post reveal">
         <div class="image">
           <img src="img/Products/product_01-400x800.png" alt="Product">
         </div>
@@ -40,7 +40,7 @@ include_once "./inc/menu-white.php";
         </div>
       </div>
 
-      <div class="single-post">
+      <div class="single-post reveal">
         <div class="image">
           <img src="img/Products/product_02-400x800.png" alt="Product">
         </div>
@@ -58,7 +58,7 @@ include_once "./inc/menu-white.php";
         </div>
       </div>
 
-      <div class="single-post">
+      <div class="single-post reveal">
         <div class="image">
           <img src="img/Products/product_03-400x800.png" alt="Product">
         </div>
@@ -76,7 +76,7 @@ include_once "./inc/menu-white.php";
         </div>
       </div>
 
-      <div class="single-post">
+      <div class="single-post reveal">
         <div class="image">
           <img src="img/Products/product_04-400x800.png" alt="Product">
         </div>
@@ -94,7 +94,7 @@ include_once "./inc/menu-white.php";
         </div>
       </div>
 
-      <div class="single-post">
+      <div class="single-post reveal">
         <div class="image">
           <img src="img/Products/product_05-400x800.png" alt="Product">
         </div>
@@ -112,7 +112,7 @@ include_once "./inc/menu-white.php";
         </div>
       </div>
 
-      <div class="single-post">
+      <div class="single-post reveal">
         <div class="image">
           <img src="img/Products/product_06-400x800.png" alt="Product">
         </div>
@@ -130,7 +130,7 @@ include_once "./inc/menu-white.php";
         </div>
       </div>
 
-      <div class="single-post">
+      <div class="single-post reveal">
         <div class="image">
           <img src="img/Products/product_07-400x800.png" alt="Product">
         </div>

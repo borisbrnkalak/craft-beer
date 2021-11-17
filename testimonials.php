@@ -37,7 +37,7 @@ include_once "./inc/menu-white.php";
 
       <div class="feedbacks">
         <div class="feedback-first-row">
-          <div class="specific">
+          <div class="specific reveal">
             <div class="header">
               <h3>GREAT ORGANIZATION</h3>
               <i class="fas fa-quote-right"></i>
@@ -60,7 +60,7 @@ include_once "./inc/menu-white.php";
             </div>
           </div>
 
-          <div class="specific">
+          <div class="specific reveal">
             <div class="header">
               <h3>SMALL BUT EFFICIENT</h3>
               <i class="fas fa-quote-right"></i>
@@ -83,7 +83,7 @@ include_once "./inc/menu-white.php";
             </div>
           </div>
 
-          <div class="specific">
+          <div class="specific reveal">
             <div class="header">
               <h3>EASY TO WORK WITH</h3>
               <i class="fas fa-quote-right"></i>
@@ -109,7 +109,7 @@ include_once "./inc/menu-white.php";
         </div>
 
         <div class="feedback-second-row">
-          <div class="specific">
+          <div class="specific reveal">
             <div class="header">
               <h3>REALLY NICE JOB GUYS</h3>
               <i class="fas fa-quote-right"></i>
@@ -132,7 +132,7 @@ include_once "./inc/menu-white.php";
             </div>
           </div>
 
-          <div class="specific">
+          <div class="specific reveal">
             <div class="header">
               <h3>FAST DELIVERY</h3>
               <i class="fas fa-quote-right"></i>
@@ -155,7 +155,7 @@ include_once "./inc/menu-white.php";
             </div>
           </div>
 
-          <div class="specific">
+          <div class="specific reveal">
             <div class="header">
               <h3>THANK YOU</h3>
               <i class="fas fa-quote-right"></i>
@@ -181,7 +181,7 @@ include_once "./inc/menu-white.php";
       </div>
 
       <div class="samples-of-beers">
-        <div class="one-beer">
+        <div class="one-beer reveal">
           <div class="beer-link">
             <a href="#"><img src="img/Testimonials/beer_highlight_01.png" alt="BEER" /></a>
           </div>
@@ -191,7 +191,7 @@ include_once "./inc/menu-white.php";
           </div>
         </div>
 
-        <div class="one-beer">
+        <div class="one-beer reveal">
           <div class="beer-link">
             <a href="#"><img src="img/Testimonials/beer_highlight_02.png" alt="BEER" /></a>
           </div>
@@ -201,7 +201,7 @@ include_once "./inc/menu-white.php";
           </div>
         </div>
 
-        <div class="one-beer">
+        <div class="one-beer reveal">
           <div class="beer-link">
             <a href="#"><img src="img/Testimonials/beer_highlight_03.png" alt="BEER" /></a>
           </div>
@@ -211,7 +211,7 @@ include_once "./inc/menu-white.php";
           </div>
         </div>
 
-        <div class="one-beer">
+        <div class="one-beer reveal">
           <div class="beer-link">
             <a href="#"><img src="img/Testimonials/beer_highlight_07.png" alt="BEER" /></a>
           </div>

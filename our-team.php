@@ -29,7 +29,7 @@ include_once "./inc/menu-white.php";
 
 <div class="gray">
   <div class="containerr">
-    <div class="leader">
+    <div class="leader reveal">
       <div class="image">
         <img src="img/transparent_team_1.png" alt="LEADER" />
       </div>
@@ -60,7 +60,7 @@ include_once "./inc/menu-white.php";
 <div class="white">
   <div class="containerrr">
     <div class="team">
-      <div class="human">
+      <div class="human reveal">
         <div class="text">
           <h3>Justin Vernon</h3>
           <p>
@@ -84,7 +84,7 @@ include_once "./inc/menu-white.php";
         </div>
       </div>
 
-      <div class="human">
+      <div class="human reveal">
         <div class="text">
           <h3>Aaron Kowalski</h3>
           <p>
@@ -109,7 +109,7 @@ include_once "./inc/menu-white.php";
       </div>
 
       <div class="human">
-        <div class="human">
+        <div class="human reveal">
           <div class="text">
             <h3>Vanessa Vernon</h3>
             <p>

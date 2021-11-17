@@ -28,7 +28,7 @@ if ($scriptName == "testimonials") {
 
   <div class="links">
     <ul class="nav-links">
-      <li><a class="login-btn" href="#">
+      <li class="list-login"><a class="login-btn" href="#">
           <?php
           if (isset($_COOKIE['is-logged'])) {
             $username = User::getByID($db, $_COOKIE['is-logged']);
@@ -42,7 +42,7 @@ if ($scriptName == "testimonials") {
       <?php
       if (isset($_COOKIE['is-logged'])) {
       ?>
-        <li>
+        <li class="list-logout">
           <form class="logout-form" action="services/logout.php" method="POST">
             <button name="logout-btn" type="submit" class="logout-btn ">LOGOUT</button>
           </form>

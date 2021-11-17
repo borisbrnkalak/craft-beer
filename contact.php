@@ -62,7 +62,7 @@ include_once "./inc/menu-white.php";
 
 <div class="white">
   <div class="containerr">
-    <div class="formular-wrapper">
+    <div class="formular-wrapper reveal">
       <div class="formular-text">
         <h1>Get in touch</h1>
         <p>

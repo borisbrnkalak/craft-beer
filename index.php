@@ -21,7 +21,7 @@ include_once "./inc/menu-white.php";
 
 <div class="white">
   <div class="container">
-    <div class="beer-up">
+    <div class="beer-up reveal">
       <div class="image">
         <img src="img/beer_transparent.png" alt="BEER" />
       </div>
@@ -90,7 +90,7 @@ include_once "./inc/menu-white.php";
 </div>
 
 <div class="white">
-  <div class="products">
+  <div class="products reveal">
     <div class="containerr">
       <div class="header">
         <h1>PRODUCT DESCRIPTIONS</h1>
@@ -161,7 +161,7 @@ include_once "./inc/menu-white.php";
 
 <div class="gray">
   <div class="containerr">
-    <div class="numbers">
+    <div class="numbers reveal">
       <div class="math">
         <i class="fas fa-balance-scale"></i>
         <h1>1872</h1>
@@ -242,7 +242,7 @@ include_once "./inc/menu-white.php";
 
 <div class="gray">
   <div class="containerr">
-    <div class="leader">
+    <div class="leader reveal">
       <div class="image">
         <img src="img/transparent_team_1.png" alt="LEADER" />
       </div>
@@ -282,7 +282,7 @@ include_once "./inc/menu-white.php";
       </div>
 
       <div class="whole-crew">
-        <div class="specific-member">
+        <div class="specific-member reveal">
           <div class="image">
             <a href="#"><img src="img/team_2.jpg" alt="CREW" /></a>
           </div>
@@ -295,7 +295,7 @@ include_once "./inc/menu-white.php";
           </div>
         </div>
 
-        <div class="specific-member">
+        <div class="specific-member reveal">
           <div class="image">
             <a href="#"><img src="img/team_1.jpg" alt="CREW" /></a>
           </div>
@@ -308,7 +308,7 @@ include_once "./inc/menu-white.php";
           </div>
         </div>
 
-        <div class="specific-member">
+        <div class="specific-member reveal">
           <div class="image">
             <a href="#"><img src="img/team_3.jpg" alt="CREW" /></a>
           </div>

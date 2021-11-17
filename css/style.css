@@ -1567,6 +1567,18 @@ textarea {
   background-color: #2f1c00;
 }
 
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 @media screen and (max-width: 1300px) {
   .movable-products {
     flex-direction: column;
@@ -1780,11 +1792,6 @@ textarea {
   .paralax .header,
   .white-var.header {
     height: 100px;
-  }
-
-  .nav-links li:first-child,
-  .nav-links li:nth-child(2) {
-    display: none;
   }
 }
 
@@ -2016,8 +2023,8 @@ textarea {
 }
 
 @media screen and (min-width: 280px) and (max-width: 1320px) {
-  .first-row,
-  .second-row {
+  .images-wtext .first-row,
+  .images-wtext .second-row {
     flex-direction: column;
   }
 
