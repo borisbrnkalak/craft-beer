@@ -6,8 +6,6 @@
 
     $db = new Database();
 
-    //User::insert($db, new User(null, $_POST['login-email'], $_POST['login-password']));
-
     if (isset($_POST['submit-btn'])){
         $user = User::checkIfContains($db, $_POST['login-email']);
         if(is_null($user)) {
@@ -32,4 +30,3 @@
         header("Location: " . $_SERVER["HTTP_REFERER"]);
         die();
     }
-?>

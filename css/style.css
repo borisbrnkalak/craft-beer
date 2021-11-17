@@ -642,6 +642,10 @@ html {
   color: #b28564;
 }
 
+.white-header .line {
+  background-color: #464646;
+}
+
 .leader .text p {
   line-height: 1.8;
   font-size: 15px;
@@ -1158,10 +1162,6 @@ html {
   justify-content: space-between;
 }
 
-.connoisseurs .specific {
-  width: 25%;
-}
-
 .specific .header h3 {
   letter-spacing: 1px;
   font-size: 1em;
@@ -1182,6 +1182,7 @@ html {
   font-size: 14px;
   padding-bottom: 2em;
   border-bottom: 1px solid #b9b9b9;
+  word-break: break-all;
 }
 
 .specific .footer-specific {
@@ -1200,6 +1201,20 @@ html {
   font-size: 0.7em;
   color: #181818;
   font-weight: 600;
+}
+
+.feedbacks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 8em;
+}
+
+.feedback-form {
+  margin-top: 6em;
+}
+
+.feedback-form input {
+  width: 98.5%;
 }
 
 .connoisseurs .feedback-first-row,
@@ -1444,7 +1459,8 @@ textarea {
   outline: 2px solid brown;
 }
 
-.formular button {
+.formular button,
+.feedback-form button {
   width: 98.5%;
   margin-top: 0.5em;
   height: 50px;
@@ -1457,7 +1473,8 @@ textarea {
   transition: 0.5s;
 }
 
-.formular button:hover {
+.formular button:hover,
+.feedback-form button:hover {
   color: #181818;
 }
 
@@ -1583,6 +1600,10 @@ textarea {
   .movable-products {
     flex-direction: column;
     text-align: center;
+  }
+
+  .feedbacks {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .parallax-middle {
@@ -1793,6 +1814,12 @@ textarea {
   .white-var.header {
     height: 100px;
   }
+
+  .feedback-form {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media screen and (max-width: 1159px) {
@@ -1964,10 +1991,6 @@ textarea {
     border-bottom: 1px solid #9fb1bd;
   }
 
-  .connoisseurs .specific:nth-child(3) {
-    border: none;
-  }
-
   .specific p {
     border: none;
   }
@@ -2081,6 +2104,13 @@ textarea {
 
   .connoisseurs h1 {
     font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .feedbacks {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 5em;
   }
 }
 

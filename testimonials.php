@@ -1,6 +1,8 @@
 <?php
 include_once "./inc/header.php";
 include_once "./inc/menu-white.php";
+include_once "./db/Database.php";
+include_once "./db/models/Feedback.php";
 ?>
 
 
@@ -36,149 +38,50 @@ include_once "./inc/menu-white.php";
       <h1>FROM THE TRUE CONNOISSEURS</h1>
 
       <div class="feedbacks">
-        <div class="feedback-first-row">
-          <div class="specific reveal">
-            <div class="header">
-              <h3>GREAT ORGANIZATION</h3>
-              <i class="fas fa-quote-right"></i>
-            </div>
-            <div class="text">
-              <p>
-                My goodness – that was quick! I received my order at approx.
-                15min. Anyway – well done indeed. I’m impressed.
-              </p>
-            </div>
 
-            <div class="footer-specific">
-              <div class="footer-text">
-                <h3>JOSEPHINE LEE</h3>
-                <span>Manager</span>
-              </div>
-              <div class="link-image">
-                <a href="#"><img src="img/Testimonials/testimonials_01.jpg" alt="TEST" /></a>
-              </div>
-            </div>
-          </div>
+        <?php
+        $feedbacks = Feedback::getAllWithUser($db);
+        foreach ($feedbacks as $feed) {
+          echo '<div class="specific reveal">
+                <div class="header">
+                  <h3>' . $feed->getSubject() . '</h3>
+                  <i class="fas fa-quote-right"></i>
+                    </div>
+                    <div class="text">
+                      <p>
+                        ' . $feed->getMessage() . '
+                      </p>
+                    </div>
 
-          <div class="specific reveal">
-            <div class="header">
-              <h3>SMALL BUT EFFICIENT</h3>
-              <i class="fas fa-quote-right"></i>
-            </div>
-            <div class="text">
-              <p>
-                The guys are always keen to share their knowledge and the
-                selection is always changing. Awesome craft beers!
-              </p>
-            </div>
+                    <div class="footer-specific">
+                      <div class="footer-text">
+                        <h3>' . $feed->getUser()->getFullName() . '</h3>
+                      </div>';
 
-            <div class="footer-specific">
-              <div class="footer-text">
-                <h3>MICHAEL JOHNSON</h3>
-                <span>IT programmer</span>
-              </div>
-              <div class="link-image">
-                <a href="#"><img src="img/Testimonials/testimonials_02.jpg" alt="TEST" /></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="specific reveal">
-            <div class="header">
-              <h3>EASY TO WORK WITH</h3>
-              <i class="fas fa-quote-right"></i>
-            </div>
-            <div class="text">
-              <p>
-                Great to have access to such a great range of beers so close
-                to home. The guys are a great help too and clearly love
-                beer.
-              </p>
-            </div>
-
-            <div class="footer-specific">
-              <div class="footer-text">
-                <h3>ANN LEE</h3>
-                <span>Designer</span>
-              </div>
-              <div class="link-image">
-                <a href="#"><img src="img/Testimonials/testimonials_03.jpg" alt="TEST" /></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="feedback-second-row">
-          <div class="specific reveal">
-            <div class="header">
-              <h3>REALLY NICE JOB GUYS</h3>
-              <i class="fas fa-quote-right"></i>
-            </div>
-            <div class="text">
-              <p>
-                Hey team! I wanna tell you that your product is great (who
-                doesn’t like beer?), great service, great experience.
-              </p>
-            </div>
-
-            <div class="footer-specific">
-              <div class="footer-text">
-                <h3>SAMUEL WHITE</h3>
-                <span>Travel agent</span>
-              </div>
-              <div class="link-image">
-                <a href="#"><img src="img/Testimonials/testimonials_04.jpg" alt="TEST" /></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="specific reveal">
-            <div class="header">
-              <h3>FAST DELIVERY</h3>
-              <i class="fas fa-quote-right"></i>
-            </div>
-            <div class="text">
-              <p>
-                Thanks to Craft Beer for organising beer for my party.
-                Awesome, friendly and prompt service – you guys are champs!
-              </p>
-            </div>
-
-            <div class="footer-specific">
-              <div class="footer-text">
-                <h3>MIKE THOMSON</h3>
-                <span>Musician</span>
-              </div>
-              <div class="link-image">
-                <a href="#"><img src="img/Testimonials/testimonials_05.jpg" alt="TEST" /></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="specific reveal">
-            <div class="header">
-              <h3>THANK YOU</h3>
-              <i class="fas fa-quote-right"></i>
-            </div>
-            <div class="text">
-              <p>
-                Just a follow up to my order. Ordered yesterday morning and
-                delivered today! Wonderful service. Thank you.
-              </p>
-            </div>
-
-            <div class="footer-specific">
-              <div class="footer-text">
-                <h3>MARIA LOPES</h3>
-                <span>Engineer</span>
-              </div>
-              <div class="link-image">
-                <a href="#"><img src="img/Testimonials/testimonials_06.jpg" alt="TEST" /></a>
-              </div>
-            </div>
-          </div>
-        </div>
+          if ($feed->getUserId() == $_COOKIE['is-logged']) {
+            echo ' <div class="footer-icons">
+                      <a href="services/feedback.php?delete=1&feedback_id=' . $feed->getId() . '"><i class="fas fa-trash"></i></a> 
+                      <a href="services/feedback.php?edit=1&feedback_id=' . $feed->getId() . '"><i class="fas fa-edit"></i></a> 
+                    </div>';
+          }
+          echo '    </div>
+                  </div>';
+        }
+        ?>
       </div>
+
+      <?php
+      if ($_COOKIE['is-logged']) {
+      ?>
+        <form action="services/feedback.php" method='POST' class="feedback-form reveal">
+          <input name="feedback-topic" type="text" placeholder="TOPIC">
+          <textarea name="feedback-message" rows="10" placeholder="YOUR OPINION"></textarea>
+          <button name="feedback-submit" type="submit">SUBMIT</button>
+        </form>
+
+      <?php
+      }
+      ?>
 
       <div class="samples-of-beers">
         <div class="one-beer reveal">

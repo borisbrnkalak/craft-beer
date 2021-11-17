@@ -1,12 +1,5 @@
 <?php
 
-/**
- * skontrolovat checkExist a musi byt null
- * skontrolovat zhodne hesla
- * ulozit usra do bdä
- * zahashovat heslo
- */
-
 include_once '../inc/settings.php';
 include_once '../db/models/User.php';
 include_once '../db/Database.php';

@@ -8,6 +8,3 @@
     /*if(isset($_COOKIE['is-logged'])) {
         echo "Is logged in ".$_COOKIE['is-logged'];
     }*/
-    
-
-?>
