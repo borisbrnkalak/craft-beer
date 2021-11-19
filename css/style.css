@@ -1185,6 +1185,15 @@ html {
   word-break: break-all;
 }
 
+.edit-feedback {
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+.edit-feedback input {
+  width: 98.5%;
+}
+
 .specific .footer-specific {
   display: flex;
   justify-content: space-between;
@@ -1454,13 +1463,28 @@ textarea {
   transition: 0.2s;
 }
 
+.error-message-login,
+.error-message-register {
+  background: #e25151;
+  color: #fff;
+}
+
 .formular input:focus,
 .formular textarea:focus {
   outline: 2px solid brown;
 }
 
+.footer-icons i {
+  transition: 0.5s;
+}
+
+.footer-icons i:hover {
+  color: #464646;
+}
+
 .formular button,
-.feedback-form button {
+.feedback-form button,
+.edit-feedback button {
   width: 98.5%;
   margin-top: 0.5em;
   height: 50px;
@@ -1474,7 +1498,8 @@ textarea {
 }
 
 .formular button:hover,
-.feedback-form button:hover {
+.feedback-form button:hover,
+.edit-feedback button:hover {
   color: #181818;
 }
 
@@ -2191,10 +2216,12 @@ textarea {
   outline-color: brown;
 }
 
-.modal__form button {
+.modal__form button,
+.check-register {
+  text-align: center;
   grid-column: 1 / span 2;
   justify-self: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
   font-size: 1.2em;
   padding: 0.5em 3em;
   cursor: pointer;
@@ -2205,7 +2232,13 @@ textarea {
   transition: 0.5s;
 }
 
-.modal__form button:hover {
+.check-register {
+  text-decoration: none;
+  margin-top: 1em;
+}
+
+.modal__form button:hover,
+.check-register:hover {
   background-color: #2f1c00;
 }
 

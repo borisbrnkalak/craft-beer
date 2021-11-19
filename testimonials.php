@@ -61,7 +61,7 @@ include_once "./db/models/Feedback.php";
           if ($feed->getUserId() == $_COOKIE['is-logged']) {
             echo ' <div class="footer-icons">
                       <a href="services/feedback.php?delete=1&feedback_id=' . $feed->getId() . '"><i class="fas fa-trash"></i></a> 
-                      <a href="services/feedback.php?edit=1&feedback_id=' . $feed->getId() . '"><i class="fas fa-edit"></i></a> 
+                      <a href="./edit.php?edit=1&feedback_id=' . $feed->getId() . '"><i class="fas fa-edit"></i></a> 
                     </div>';
           }
           echo '    </div>
@@ -69,6 +69,8 @@ include_once "./db/models/Feedback.php";
         }
         ?>
       </div>
+
+
 
       <?php
       if ($_COOKIE['is-logged']) {

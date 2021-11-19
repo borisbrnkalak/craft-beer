@@ -11,8 +11,7 @@ if (isset($_POST['feedback-submit'])) {
     Feedback::insert($db, new Feedback(null, $_POST['feedback-topic'], $_POST['feedback-message'], $_COOKIE['is-logged']));
     header("Location: " . $_SERVER["HTTP_REFERER"]);
 }
-if (isset($_GET['edit'])) {
-}
+
 if (isset($_GET['delete'])) {
     $feed = Feedback::getByID($db, $_GET['feedback_id']);
 

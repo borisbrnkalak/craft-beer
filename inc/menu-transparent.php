@@ -8,7 +8,7 @@ function setClass($scriptName, $page)
 
 <header class="header 
 <?php
-if ($scriptName == "testimonials") {
+if ($scriptName == "testimonials" || $scriptName == 'edit') {
   echo "white-header";
 } else {
   echo "";
@@ -16,7 +16,7 @@ if ($scriptName == "testimonials") {
 ?>
 ">
   <div class="logo">
-    <img src="<?php echo $scriptName == "testimonials" ? "img/logo-black.png" : "img/logo-white.png" ?>" alt=" LOGO" />
+    <img src="<?php echo $scriptName == "testimonials" || $scriptName == 'edit' ? "img/logo-black.png" : "img/logo-white.png" ?>" alt=" LOGO" />
   </div>
 
   <div class="hamburger">

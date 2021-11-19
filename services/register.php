@@ -9,7 +9,7 @@ $db = new Database();
 if (isset($_POST['register-btn'])) {
     $user = User::checkIfContains($db, $_POST['register-email']);
     if (is_null($user)) {
-        if ($_POST['register-password'] == $_POST['register-confirm-password']) {
+        if ($_POST['register-password'] == $_POST['register-confirm-password'] && $_POST['register-email'] != "" && $_POST['register-password'] != "" && $_POST['register-name'] != "") {
 
             success("account succesfully created!", $db);
         } else {
