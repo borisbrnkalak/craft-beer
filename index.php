@@ -325,8 +325,10 @@ include_once "./inc/menu-white.php";
   </div>
 </div>
 
-<div class="map">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6565.39944471201!2d17.107207!3d48.144746!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x25d8fe21bc371af4!2sStomatologia%20Heudukova!5e1!3m2!1ssk!2ssk!4v1627660578699!5m2!1ssk!2ssk" width="2500" height="1000" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+<<div class="map" id="map">
+  <!--<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6565.39944471201!2d17.107207!3d48.144746!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x25d8fe21bc371af4!2sStomatologia%20Heudukova!5e1!3m2!1ssk!2ssk!4v1627660578699!5m2!1ssk!2ssk" width="2500" height="1000" style="border: 0" allowfullscreen="" loading="lazy"></iframe>-->
+
+
   <div class="melbourne">
     <img src="img/inner_1.jpg" alt="INER" />
     <div class="text">
@@ -347,11 +349,11 @@ include_once "./inc/menu-white.php";
       </div>
     </div>
   </div>
-</div>
+  </div>
 
 
 
-<?php
-include_once "./inc/paralax-no3.php";
-include_once "./inc/footer.php";
-?>
+  <?php
+  include_once "./inc/paralax-no3.php";
+  include_once "./inc/footer.php";
+  ?>

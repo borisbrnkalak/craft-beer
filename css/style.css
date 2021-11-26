@@ -752,10 +752,10 @@ html {
   z-index: 0;
 }
 
-.map iframe {
+/*.map iframe {
   width: 100%;
   height: 100%;
-}
+}*/
 
 .melbourne {
   max-width: 348px;
@@ -833,6 +833,21 @@ html {
   padding: 8em 0 4em 0;
   font-family: "Roboto Slab";
   border-bottom: 1px solid #b9b9b9;
+}
+
+.contact-info {
+  width: 98.5%;
+  text-align: center;
+  margin-right: 0;
+  background-color: #b28564;
+  border: 1px solid #fff;
+  font-family: "Roboto Slab";
+  color: #fff;
+  border-radius: 4px;
+}
+
+.contact-info p {
+  padding: 1em 2em;
 }
 
 .footer .about-us,
@@ -1467,6 +1482,9 @@ textarea {
 .error-message-register {
   background: #e25151;
   color: #fff;
+}
+
+.error-message-register {
 }
 
 .formular input:focus,

@@ -9,7 +9,7 @@ const registerBtn = document.querySelector(".register-btn");
 const registerWindow = document.querySelector(".register.modal");
 
 const openModal = function (event) {
-  event.preventDefault();
+  event && event.preventDefault();
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
 };
@@ -35,7 +35,16 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
-registerBtn.addEventListener("click", function () {
+const openRegister = function (event) {
+  event && event.preventDefault();
   modal.classList.remove("hidden");
   registerWindow.classList.remove("hidden");
-});
+};
+
+registerBtn.addEventListener("click", openRegister);
+
+/*registerBtn.addEventListener("click", function (event) {
+  event && event.preventDefault();
+  modal.classList.remove("hidden");
+  registerWindow.classList.remove("hidden");
+});*/

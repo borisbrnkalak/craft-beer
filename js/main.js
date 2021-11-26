@@ -28,6 +28,11 @@ const page = path.split("/").pop().split(".").at(0);
 const covers = document.querySelectorAll(".all-products .movable-products");
 const leftArrow = document.querySelector(".left-arrow a");
 const rightArrow = document.querySelector(".right-arrow a");
+
 if (page === "index" || page === "overview") {
   new Slider(covers, leftArrow, rightArrow);
+}
+
+if (page === "index") {
+  new Map();
 }

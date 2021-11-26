@@ -15,23 +15,20 @@ const register_chech = document.querySelector(".check-register");
 console.log(register_password, register_password.value);
 
 register_chech.addEventListener("click", function () {
-  console.log(
-    register_password,
-    register_password.value,
-    register_conf_password,
-    register_conf_password.value
-  );
-
   if (register_username.value === "") {
+    register_message.style.display = "block";
     register_message.value = "Missing your name!";
   } else if (
     register_email.value.length === 0 ||
     !register_email.value.includes("@")
   ) {
+    register_message.style.display = "block";
     register_message.value = "Missing or bad email!";
   } else if (register_password.value.length === 0) {
+    register_message.style.display = "block";
     register_message.value = "Missing password!";
   } else if (register_password.value != register_conf_password.value) {
+    register_message.style.display = "block";
     register_message.value = "Passwords does not match!";
   } else {
     register_message.value = "";

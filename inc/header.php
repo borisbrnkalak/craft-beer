@@ -5,6 +5,10 @@ include_once "./db/models/User.php";
 //include_once "./inc/login-response.php";
 
 $db = new Database();
+
+if (isset($_COOKIE['is-logged'])) {
+  $user = User::getByID($db, $_COOKIE['is-logged']);
+}
 ?>
 
 <!DOCTYPE html>
@@ -24,6 +28,22 @@ $db = new Database();
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/leaflet.css">
 </head>
 
 <body>
+
+  <?php
+  if (isset($_SESSION['login-result'])) {
+    echo '<script>window.addEventListener("DOMContentLoaded", () => {
+            openModal();
+          });</script>';
+  }
+
+  if (isset($_SESSION['register-result'])) {
+    echo
+    '<script>window.addEventListener("DOMContentLoaded", () => {
+            openRegister();
+          });</script>';
+  }
+  ?>

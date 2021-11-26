@@ -74,15 +74,23 @@ include_once "./inc/menu-white.php";
       </div>
       <div class="formular-element">
         <form action="services/contact-data.php" method="POST" class="formular">
+          <div class="contact-info">
+            <p>
+              <?php echo $_SESSION['contact-result'] ?>
+            </p>
+          </div>
           <div class="inputs">
-            <input type="email" name="email" placeholder="YOUR EMAIL" required />
-            <input type="text" name="name" placeholder="YOUR NAME" required />
+            <input type="email" name="email" placeholder="YOUR EMAIL" value="<?php echo isset($_COOKIE['is-logged']) ?  $user->getMail() : "" ?>" />
+            <input type="text" name="name" placeholder="YOUR NAME" value="<?php echo isset($_COOKIE['is-logged']) ?  $user->getFullName() : "" ?>" />
           </div>
 
-          <textarea name="message" rows="10" placeholder="MESSAGE" required></textarea>
+          <textarea name="message" rows="10" placeholder="MESSAGE"></textarea>
 
           <button type="submit" name="submit">SUBMIT</button>
         </form>
+        <?php
+        unset($_SESSION['contact-result']);
+        ?>
       </div>
     </div>
   </div>
