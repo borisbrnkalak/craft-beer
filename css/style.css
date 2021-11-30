@@ -1484,7 +1484,19 @@ textarea {
   color: #fff;
 }
 
-.error-message-register {
+.err-prod {
+  display: none;
+  background: #e25151;
+  color: #fff;
+  width: 98.5%;
+  margin: 1em 0;
+  border-radius: 4px;
+  font-family: "Roboto Slab", Arial, sans-serif;
+}
+
+.err-prod p {
+  line-height: 1.8;
+  padding: 0.5em;
 }
 
 .formular input:focus,
@@ -1538,6 +1550,12 @@ textarea {
   cursor: pointer;
   transition: 0.5s;
   width: 100%;
+  height: 100%;
+}
+
+.single-post:hover .link a {
+  color: #181818;
+  border-color: #181818;
 }
 
 .single-post .image {
@@ -1548,7 +1566,33 @@ textarea {
   width: 100%;
 }
 
+/*.single-post .link {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}*/
+
 .single-post .text {
+  font-family: "Roboto Slab", Arial;
+}
+
+.desc p {
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 30px;
+}
+
+.err {
+  margin-top: 0.5em;
+  display: none;
+}
+
+.err p {
+  background: #e25151;
+  padding: 0.5em;
+  color: #fff;
+  border-radius: 4px;
   font-family: "Roboto Slab", Arial;
 }
 
@@ -1570,6 +1614,7 @@ textarea {
   border: 1px solid #b28564;
   border-radius: 3px;
   display: block;
+  transition: all 0.5s;
 }
 
 .login {
@@ -1637,6 +1682,54 @@ textarea {
 .active {
   transform: translateY(0);
   opacity: 1;
+}
+
+.addProduct {
+  margin: 6em 0;
+}
+
+.addProduct h1 {
+  font-size: 1.5em;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+}
+
+.addProduct input {
+  width: 49%;
+  font-size: 1.1em;
+}
+
+.addProduct textarea {
+  font-size: 1.3em;
+}
+
+.addProduct input:focus,
+.addProduct textarea:focus {
+  outline-color: brown;
+}
+
+.addProduct .first-row,
+.addProduct .second-row {
+  width: 98.5%;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.addProduct button {
+  margin-top: 0.5em;
+  border: 1px solid #b28564;
+  background: #fff;
+  color: #b28564;
+  width: 98.5%;
+  padding: 1em;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.addProduct button:hover {
+  color: #181818;
+  border-color: #181818;
 }
 
 @media screen and (max-width: 1300px) {
@@ -2108,6 +2201,17 @@ textarea {
 
   .images-wtext .text h1 {
     font-size: 2.1em;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .addProduct .first-row,
+  .addProduct .second-row {
+    flex-direction: column;
+  }
+
+  .addProduct input {
+    width: 98.5%;
   }
 }
 

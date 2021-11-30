@@ -2,6 +2,7 @@
 include_once "./inc/settings.php";
 include_once "./db/Database.php";
 include_once "./db/models/User.php";
+include_once "./db/models/Beer.php";
 //include_once "./inc/login-response.php";
 
 $db = new Database();
