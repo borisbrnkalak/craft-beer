@@ -1484,7 +1484,8 @@ textarea {
   color: #fff;
 }
 
-.err-prod {
+.err-prod,
+.err-feed {
   display: none;
   background: #e25151;
   color: #fff;
@@ -1494,7 +1495,8 @@ textarea {
   font-family: "Roboto Slab", Arial, sans-serif;
 }
 
-.err-prod p {
+.err-prod p,
+.err-feed p {
   line-height: 1.8;
   padding: 0.5em;
 }

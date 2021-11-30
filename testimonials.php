@@ -76,8 +76,11 @@ include_once "./db/models/Feedback.php";
       if ($_COOKIE['is-logged']) {
       ?>
         <form action="services/feedback.php" method='POST' class="feedback-form reveal">
-          <input name="feedback-topic" type="text" placeholder="TOPIC">
-          <textarea name="feedback-message" rows="10" placeholder="YOUR OPINION"></textarea>
+          <div class="err-feed">
+            <p></p>
+          </div>
+          <input name="feedback-topic" type="text" class="feedback_topic" placeholder="TOPIC">
+          <textarea name="feedback-message" rows="10" class="feedback_text" placeholder="YOUR OPINION"></textarea>
           <button name="feedback-submit" type="submit">SUBMIT</button>
         </form>
 

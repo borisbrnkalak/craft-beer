@@ -1,6 +1,6 @@
 "use strict";
 
-let timeout;
+/*let timeout;
 const password = document.querySelector(".modal__form.reg .password");
 
 const strong = new RegExp(
@@ -19,4 +19,4 @@ password.addEventListener("input", () => {
   clearTimeout(timeout);
 
   timeout = setTimeout(() => checkPassword(password.value), 500);
-});
+});*/
