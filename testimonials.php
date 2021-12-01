@@ -58,11 +58,16 @@ include_once "./db/models/Feedback.php";
                         <h3>' . $feed->getUser()->getFullName() . '</h3>
                       </div>';
 
-          if ($feed->getUserId() == $_COOKIE['is-logged'] || $user->getIsAdmin() == 1) {
-            echo ' <div class="footer-icons">
-                      <a href="services/feedback.php?delete=1&feedback_id=' . $feed->getId() . '"><i class="fas fa-trash"></i></a> 
-                      <a href="./edit.php?edit=1&feedback_id=' . $feed->getId() . '"><i class="fas fa-edit"></i></a> 
-                    </div>';
+          if ($feed->getUserId() == $_COOKIE['is-logged'] || (!is_null($user) && $user->getIsAdmin() == 1)) {
+            echo ' <div class="footer-icons">';
+
+
+            echo ' <a href="services/feedback.php?delete=1&feedback_id=' . $feed->getId() . '"><i class="fas fa-trash"></i></a> ';
+
+            if ($feed->getUserId() == $_COOKIE['is-logged']) {
+              echo ' <a href="./edit.php?edit=1&feedback_id=' . $feed->getId() . '"><i class="fas fa-edit"></i></a> ';
+            }
+            echo ' </div>';
           }
           echo '    </div>
                   </div>';

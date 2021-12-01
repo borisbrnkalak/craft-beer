@@ -77,6 +77,11 @@ form_reg.addEventListener("submit", function (event) {
     checkColorss();
     errContainer_reg.style.display = "block";
     event.preventDefault();
+  } else if (pass_reg.value != conf_pass_reg.value) {
+    error_reg.textContent = "Passwords does not match!";
+    checkColorss();
+    errContainer_reg.style.display = "block";
+    event.preventDefault();
   } else {
     errContainer_reg.style.display = "none";
     error_reg.textContent = "";
