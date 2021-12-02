@@ -48,26 +48,20 @@
         }
 
         public function insert($query){
-            // $result = $this->connection->query($query);
-            // $results = [];
+
             return $this->makeCUD("Error while inserting:",$query);
             
         }
         public function update($query){
-            // $result = $this->connection->query($query);
-            // $results = [];
 
             return $this->makeCUD("Error while updating:",$query);
             
         }
         public function delete($query){
-            // $result = $this->connection->query($query);
-            // $results = [];
 
             return $this->makeCUD("Error while deleting:",$query);
             
         }
-        //create = insert ; update = update; delete = delete
         private function makeCUD($errorMessage, $query)
         {
             if ($this->connection->query($query) === TRUE) {

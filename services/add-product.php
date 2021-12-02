@@ -17,6 +17,8 @@ if (isset($_POST['submit'])) {
             failure("Missing country!");
         } else if ($_POST['text'] == "") {
             failure('Missing description!');
+        } else if (!strpos($_FILES['image']['name'], 'png')) {
+            failure('Bad type of file!');
         } else {
 
             Beer::insert($db, new Beer(null, $_POST['name'], $_POST['text'], $_POST['price'], $_POST['country'], $_FILES['image']['name']));
