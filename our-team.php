@@ -60,6 +60,38 @@ include_once "./inc/menu-white.php";
 <div class="white">
   <div class="containerrr">
     <div class="team">
+
+      <?php
+      //$employees = Employee::getAll($db);
+
+      //foreach ($employees as $employee) {
+      echo ' <div class="human reveal">
+                  <div class="text">
+                  <h3>Justin Vernon</h3>
+                  <p>
+                    Agile leverage frameworks to provide a robust synopsis for high
+                    level overviews. Iterative approaches to corporate strategy
+                    foster collaborative thinking to further the overall value
+                    proposition.
+                  </p>
+                  <div class="link">
+                    <a href="#">VIEW MORE</a>
+                    <div class="social-links">
+                      <a href="#"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                 </div>
+                </div>
+
+                <div class="image">
+                  <img src="img/Employees/team_1.jpg" alt="TEAM" />
+                </div>
+              </div>';
+      //}
+      ?>
+
+
       <div class="human reveal">
         <div class="text">
           <h3>Justin Vernon</h3>
@@ -80,7 +112,7 @@ include_once "./inc/menu-white.php";
         </div>
 
         <div class="image">
-          <img src="img/team_1.jpg" alt="TEAM" />
+          <img src="img/Employees/team_1.jpg" alt="TEAM" />
         </div>
       </div>
 
@@ -104,36 +136,60 @@ include_once "./inc/menu-white.php";
         </div>
 
         <div class="image">
-          <img src="img/team_2.jpg" alt="TEAM" />
+          <img src="img/Employees/team_2.jpg" alt="TEAM" />
         </div>
       </div>
 
-      <div class="human">
-        <div class="human reveal">
-          <div class="text">
-            <h3>Vanessa Vernon</h3>
-            <p>
-              Collaboratively administrate empowered markets via
-              plug-and-play networks. Dynamically procrastinate B2c users
-              after installed base benefits. Dramatically visualize customer
-              directed convergence.
-            </p>
-            <div class="link">
-              <a href="#">VIEW MORE</a>
-              <div class="social-links">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-              </div>
+      <div class="human reveal">
+        <div class="text">
+          <h3>Vanessa Vernon</h3>
+          <p>
+            Collaboratively administrate empowered markets via
+            plug-and-play networks. Dynamically procrastinate B2c users
+            after installed base benefits. Dramatically visualize customer
+            directed convergence.
+          </p>
+          <div class="link">
+            <a href="#">VIEW MORE</a>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
             </div>
           </div>
+        </div>
 
-          <div class="image">
-            <img src="img/team_3.jpg" alt="TEAM" />
-          </div>
+        <div class="image">
+          <img src="img/Employees/team_3.jpg" alt="TEAM" />
         </div>
       </div>
+
     </div>
+
+    <?php
+    if ($_COOKIE['is-logged'] && $user->getIsAdmin() == 1) {
+
+      echo '<div class="addEmployee">
+              <h1>Add new employee</h1>
+                <div class="err-empl">
+                  <p style="white-space: pre;"></p>
+                </div>
+
+              <form action="services/add-employee.php" class="new-employee" method="POST" enctype="multipart/form-data">
+                <input type="text" name="name" placeholder="Employee name">
+                <textarea name="text" rows="10" placeholder="Employee description"></textarea>
+                <input type="file" , name="image">
+                <button type="submit" name="submit-emp">SUBMIT</button>
+              </form>
+            </div>';
+      echo $_SESSION['employee-result'];
+      unset($_SESSION['employee-result']);
+    }
+    ?>
+
+
+
+
   </div>
 </div>
 

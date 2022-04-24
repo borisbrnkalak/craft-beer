@@ -1501,9 +1501,32 @@ textarea {
   padding: 0.5em;
 }
 
+.addEmployee h1 {
+  font-size: 1.5em;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+}
+
+.new-employee input:focus,
 .formular input:focus,
 .formular textarea:focus {
   outline: 2px solid brown;
+}
+
+.addEmployee {
+  margin: 4em 0;
+}
+
+.new-employee {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-employee input {
+  width: 98.5%;
+  margin: 0.5em 0;
 }
 
 .footer-icons i {
@@ -1516,7 +1539,8 @@ textarea {
 
 .formular button,
 .feedback-form button,
-.edit-feedback button {
+.edit-feedback button,
+.new-employee button {
   width: 98.5%;
   margin-top: 0.5em;
   height: 50px;
@@ -1531,7 +1555,8 @@ textarea {
 
 .formular button:hover,
 .feedback-form button:hover,
-.edit-feedback button:hover {
+.edit-feedback button:hover,
+.new-employee button:hover {
   color: #181818;
 }
 

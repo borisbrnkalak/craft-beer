@@ -284,7 +284,7 @@ include_once "./inc/menu-white.php";
       <div class="whole-crew">
         <div class="specific-member reveal">
           <div class="image">
-            <a href="#"><img src="img/team_2.jpg" alt="CREW" /></a>
+            <a href="#"><img src="img/Employees/team_2.jpg" alt="CREW" /></a>
           </div>
           <div class="text">
             <h3>Aaron Kowalski</h3>
@@ -297,7 +297,7 @@ include_once "./inc/menu-white.php";
 
         <div class="specific-member reveal">
           <div class="image">
-            <a href="#"><img src="img/team_1.jpg" alt="CREW" /></a>
+            <a href="#"><img src="img/Employees/team_1.jpg" alt="CREW" /></a>
           </div>
           <div class="text">
             <h3>Justin Vernon</h3>
@@ -310,7 +310,7 @@ include_once "./inc/menu-white.php";
 
         <div class="specific-member reveal">
           <div class="image">
-            <a href="#"><img src="img/team_3.jpg" alt="CREW" /></a>
+            <a href="#"><img src="img/Employees/team_3.jpg" alt="CREW" /></a>
           </div>
           <div class="text">
             <h3>Justin Vernon</h3>
